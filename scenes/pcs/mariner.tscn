@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5cjegaytivsp"]
+
+[ext_resource type="PackedScene" uid="uid://cgd1p2ombxm00" path="res://scenes/pcs/basePC.tscn" id="1_g53ku"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g53ku"]
+
+[node name="basePC" instance=ExtResource("1_g53ku")]
+
+[node name="overworldAnimation" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_g53ku")
+animation = &"default"
+frame_progress = 0.0

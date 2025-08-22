@@ -1,56 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgd1p2ombxm00"]
+[gd_scene load_steps=2 format=3 uid="uid://dow6yw7wmoxj0"]
 
-[ext_resource type="Texture2D" uid="uid://ctb68kuw1cjuo" path="res://sprites/pcs/MC.png" id="1_v574r"]
+[ext_resource type="PackedScene" uid="uid://cgd1p2ombxm00" path="res://scenes/pcs/basePC.tscn" id="1_hk2bv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy1be"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ny4t"]
-atlas = ExtResource("1_v574r")
-region = Rect2(52, 104, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_itrdj"]
-atlas = ExtResource("1_v574r")
-region = Rect2(65, 104, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yj21e"]
-atlas = ExtResource("1_v574r")
-region = Rect2(13, 104, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6nsms"]
-atlas = ExtResource("1_v574r")
-region = Rect2(26, 104, 13, 13)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_yc5nw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3ny4t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_itrdj")
-}],
-"loop": true,
-"name": &"north",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yj21e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6nsms")
-}],
-"loop": true,
-"name": &"south",
-"speed": 4.0
-}]
-
-[node name="Mc" type="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_hy1be")
-
-[node name="overworldAnimation" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_yc5nw")
-animation = &"south"
-frame_progress = 0.163951
+[node name="Mc" instance=ExtResource("1_hk2bv")]
