@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5cjegaytivsp"]
+[gd_scene load_steps=4 format=3 uid="uid://b5cjegaytivsp"]
 
 [ext_resource type="PackedScene" uid="uid://cgd1p2ombxm00" path="res://scenes/pcs/basePC.tscn" id="1_g53ku"]
+[ext_resource type="Texture2D" uid="uid://cws3515sk47fi" path="res://sprites/pcs/Mariner.png" id="2_nql5a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g53ku"]
 
@@ -9,4 +10,6 @@
 [node name="overworldAnimation" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_g53ku")
 animation = &"default"
-frame_progress = 0.0
+
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_nql5a")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgd1p2ombxm00"]
+[gd_scene load_steps=12 format=3 uid="uid://cgd1p2ombxm00"]
 
 [ext_resource type="Texture2D" uid="uid://ctb68kuw1cjuo" path="res://sprites/pcs/MC.png" id="1_v574r"]
 
@@ -55,6 +55,48 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_i0uiu"]
+resource_name = "standSouth"
+
+[sub_resource type="Animation" id="Animation_shiau"]
+resource_name = "walkSouth"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [81, 82]
+}
+
+[sub_resource type="Animation" id="Animation_apn16"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [81]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4mper"]
+_data = {
+&"RESET": SubResource("Animation_apn16"),
+&"standSouth": SubResource("Animation_i0uiu"),
+&"walkSouth": SubResource("Animation_shiau")
+}
+
 [node name="basePC" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -68,6 +110,10 @@ animation = &"west"
 texture = ExtResource("1_v574r")
 hframes = 10
 vframes = 10
-frame = 79
+frame = 81
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_4mper")
+}
