@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctspoevfwwu77"]
+
+[ext_resource type="Texture2D" uid="uid://b0bkwackwng7n" path="res://sprites/pcs/Apple.png" id="1_ds4uk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dnct"]
+atlas = ExtResource("1_ds4uk")
+region = Rect2(13, 104, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13xb3"]
+atlas = ExtResource("1_ds4uk")
+region = Rect2(26, 104, 13, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lqmrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dnct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13xb3")
+}],
+"loop": true,
+"name": &"southWalk",
+"speed": 5.0
+}]
+
+[node name="Apple" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(82.75, 82.75)
+sprite_frames = SubResource("SpriteFrames_lqmrp")
+animation = &"southWalk"
+frame_progress = 0.697521
