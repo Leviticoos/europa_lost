@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgd1p2ombxm00"]
+[gd_scene load_steps=10 format=3 uid="uid://cgd1p2ombxm00"]
 
+[ext_resource type="Script" uid="uid://v4iq7l1pxwh8" path="res://scripts/base_pc.gd" id="1_shiau"]
 [ext_resource type="Texture2D" uid="uid://ctb68kuw1cjuo" path="res://sprites/pcs/MC.png" id="1_v574r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy1be"]
@@ -20,6 +21,23 @@ tracks/0/keys = {
 "values": [81]
 }
 
+[sub_resource type="Animation" id="Animation_iof1o"]
+resource_name = "idleEast"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [90]
+}
+
 [sub_resource type="Animation" id="Animation_i0uiu"]
 resource_name = "idleSouth"
 loop_mode = 1
@@ -34,23 +52,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [80]
-}
-
-[sub_resource type="Animation" id="Animation_shiau"]
-resource_name = "walkSouth"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [81, 82]
 }
 
 [sub_resource type="Animation" id="Animation_4mper"]
@@ -70,8 +71,8 @@ tracks/0/keys = {
 "values": [91, 92]
 }
 
-[sub_resource type="Animation" id="Animation_iof1o"]
-resource_name = "idleEast"
+[sub_resource type="Animation" id="Animation_shiau"]
+resource_name = "walkSouth"
 length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
@@ -81,10 +82,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [90]
+"values": [81, 82]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4mper"]
@@ -97,6 +98,7 @@ _data = {
 }
 
 [node name="basePC" type="CharacterBody2D"]
+script = ExtResource("1_shiau")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
