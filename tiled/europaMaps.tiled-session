@@ -9,19 +9,20 @@
     ],
     "fileStates": {
         "Spritesheet2.2.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "testWorld.tmx": {
-            "scale": 4,
+            "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 130.25,
-                "y": -37.25
+                "x": 44.666666666666686,
+                "y": -53
             }
         }
     },
     "last.exportedFilePath": "D:/All My Things/GitHub ShitHub/europa_lost/maps",
+    "last.externalTilesetPath": "D:/All My Things/GitHub ShitHub/europa_lost/tiled",
     "last.imagePath": "C:/Users/levi/OneDrive/Documents/GitHub/europa_lost/sprites/ground",
     "map.fixedSize": false,
     "map.lastUsedExportFilter": "Godot 4 Scene files (*.tscn)",
@@ -37,6 +38,7 @@
         "Spritesheet2.2.tsx",
         "testWorld.tmx"
     ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
         "height": 13,
