@@ -1,0 +1,28 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+    },
+    "last.exportedFilePath": "C:/Users/levi/OneDrive/Documents/GitHub/europa_lost/maps",
+    "last.imagePath": "C:/Users/levi/OneDrive/Documents/GitHub/europa_lost/sprites/ground",
+    "map.fixedSize": false,
+    "map.lastUsedExportFilter": "Godot 4 Scene files (*.tscn)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 13,
+    "map.tileWidth": 13,
+    "openFiles": [
+    ],
+    "project": "europaMaps.tiled-project",
+    "recentFiles": [
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 13,
+        "width": 13
+    }
+}
