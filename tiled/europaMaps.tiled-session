@@ -3,10 +3,23 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "testWorld.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
+        "Spritesheet2.2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "testWorld.tmx": {
+            "scale": 4,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 130.25,
+                "y": -37.25
+            }
+        }
     },
     "last.exportedFilePath": "D:/All My Things/GitHub ShitHub/europa_lost/maps",
     "last.imagePath": "C:/Users/levi/OneDrive/Documents/GitHub/europa_lost/sprites/ground",
@@ -16,9 +29,13 @@
     "map.tileHeight": 13,
     "map.tileWidth": 13,
     "openFiles": [
+        "Spritesheet2.2.tsx",
+        "testWorld.tmx"
     ],
     "project": "europaMaps.tiled-project",
     "recentFiles": [
+        "Spritesheet2.2.tsx",
+        "testWorld.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
