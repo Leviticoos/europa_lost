@@ -1,59 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgd1p2ombxm00"]
+[gd_scene load_steps=9 format=3 uid="uid://cgd1p2ombxm00"]
 
 [ext_resource type="Texture2D" uid="uid://ctb68kuw1cjuo" path="res://sprites/pcs/MC.png" id="1_v574r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy1be"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ny4t"]
-atlas = ExtResource("1_v574r")
-region = Rect2(52, 104, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_itrdj"]
-atlas = ExtResource("1_v574r")
-region = Rect2(65, 104, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yj21e"]
-atlas = ExtResource("1_v574r")
-region = Rect2(13, 104, 13, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6nsms"]
-atlas = ExtResource("1_v574r")
-region = Rect2(26, 104, 13, 13)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_yc5nw"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"east",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3ny4t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_itrdj")
-}],
-"loop": true,
-"name": &"north",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yj21e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6nsms")
-}],
-"loop": true,
-"name": &"south",
-"speed": 4.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"west",
-"speed": 5.0
-}]
+size = Vector2(13, 12)
 
 [sub_resource type="Animation" id="Animation_apn16"]
 length = 0.001
@@ -68,6 +18,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [81]
+}
+
+[sub_resource type="Animation" id="Animation_i0uiu"]
+resource_name = "idleSouth"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [80]
 }
 
 [sub_resource type="Animation" id="Animation_shiau"]
@@ -87,24 +53,54 @@ tracks/0/keys = {
 "values": [81, 82]
 }
 
-[sub_resource type="Animation" id="Animation_i0uiu"]
-resource_name = "idleSouth"
+[sub_resource type="Animation" id="Animation_4mper"]
+resource_name = "walkEast"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [91, 92]
+}
+
+[sub_resource type="Animation" id="Animation_iof1o"]
+resource_name = "idleEast"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [90]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4mper"]
 _data = {
 &"RESET": SubResource("Animation_apn16"),
+&"idleEast": SubResource("Animation_iof1o"),
 &"idleSouth": SubResource("Animation_i0uiu"),
+&"walkEast": SubResource("Animation_4mper"),
 &"walkSouth": SubResource("Animation_shiau")
 }
 
 [node name="basePC" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_hy1be")
-
-[node name="overworldAnimation" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_yc5nw")
-animation = &"west"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_v574r")
@@ -112,7 +108,7 @@ hframes = 10
 vframes = 10
 frame = 81
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+[node name="overworldAnimation" type="AnimationPlayer" parent="Sprite2D"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_4mper")
