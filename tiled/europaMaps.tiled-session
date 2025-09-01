@@ -8,22 +8,33 @@
         "."
     ],
     "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "Interactables.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Spritesheet2.2.tsx": {
             "scaleInDock": 2,
             "scaleInEditor": 1
         },
+        "Vehicles1.1.1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
         "testWorld.tmx": {
-            "scale": 3,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 44.666666666666686,
-                "y": -53
+                "x": 289.33333333333326,
+                "y": -219.33333333333331
             }
         }
     },
     "last.exportedFilePath": "D:/All My Things/GitHub ShitHub/europa_lost/maps",
     "last.externalTilesetPath": "D:/All My Things/GitHub ShitHub/europa_lost/tiled",
-    "last.imagePath": "C:/Users/levi/OneDrive/Documents/GitHub/europa_lost/sprites/ground",
+    "last.imagePath": "D:/All My Things/GitHub ShitHub/europa_lost/sprites/Interactables",
     "map.fixedSize": false,
     "map.lastUsedExportFilter": "Godot 4 Scene files (*.tscn)",
     "map.lastUsedFormat": "tmx",
@@ -31,11 +42,15 @@
     "map.tileWidth": 13,
     "openFiles": [
         "Spritesheet2.2.tsx",
-        "testWorld.tmx"
+        "testWorld.tmx",
+        "Vehicles1.1.1.tsx",
+        "Interactables.tsx"
     ],
     "project": "europaMaps.tiled-project",
     "recentFiles": [
         "Spritesheet2.2.tsx",
+        "Interactables.tsx",
+        "Vehicles1.1.1.tsx",
         "testWorld.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
